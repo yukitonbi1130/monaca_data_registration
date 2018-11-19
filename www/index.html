@@ -26,13 +26,18 @@
                     alert("Failed to create new object, with error code: " + error.text);
                    
                 });
-        }
-         function fetchDemo()  {
-                      ver 
-                      TestClass =  ncmb.Datastore("TestClass");
-                      TestClass.fetch().them(function(results){
-                        var data = results.get("updateDate");
-                        $("#fetch").html(data + ":" + update);
+                }
+                   function fetchAll()  {
+                      var  TestClass =  ncmb.DataStore("TestClass");
+                      TestClass.fetchAll()
+                      .then(function(results){
+                        var msg="";
+                        for(ver i=0; i<results.length; i++){
+                        var data = results[i].get("message");
+                         var update = results[i].get("updateDate");
+                         msg += data + ":" +update;
+                        }
+                        $("#fetch").html(msg);
                       })
                     }
     </script>
