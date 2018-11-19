@@ -24,8 +24,17 @@
                 .catch(function(error) {
                     // エラー時に実行される
                     alert("Failed to create new object, with error code: " + error.text);
+                   
                 });
         }
+         function fetchDemo()  {
+                      ver 
+                      TestClass =  ncmb.Datastore("TestClass");
+                      TestClass.fetch().them(function(results){
+                        var data = results.get("updateDate");
+                        $("#fetch").html(data + ":" + update);
+                      })
+                    }
     </script>
 </head>
 <body>
@@ -35,5 +44,6 @@
      <a class="button--large" onclick="fetchDemo()">Fetch Demo</a>
      <div>Fetch demo</div>
      <div id="fetch">data here</div>
+
 </body>
 </html>
